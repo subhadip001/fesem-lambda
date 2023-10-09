@@ -112,6 +112,10 @@ const tableSchema = {
   bookings: [bookSchema],
 };
 
+app.get("/fesem/test", jsonParser, async (req, res) => {
+  res.json({ message: "This is a test case" });
+});
+
 app.get("/fesem/book/fetch", jsonParser, async (req, res) => {
   var today = new Date();
   var today2 = new Date();
